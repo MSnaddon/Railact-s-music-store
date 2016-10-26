@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :artists do
-    resources :albums do
-      resources :stocks
+  scope path: "api" do
+    resources :artists do
+      resources :albums do
+        resources :stocks
+      end
     end
   end
 end
