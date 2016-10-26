@@ -6,11 +6,11 @@ let Catalog = React.createClass({
     return {}
   },
   render: function(){
-    let artists = this.props.catalogData.map((artist)=>{
-      return <Artist key={artist.id} artistData={artist}/>
+    let artists = this.props.catalogData.map((artistObject)=>{
+      return <Artist key={artistObject.id} artistData={artistObject}/>
     })
-    console.log(artists)
-    return <div>{artists}}</div>
+
+    return <div>{artists}</div>
   }
 
 
