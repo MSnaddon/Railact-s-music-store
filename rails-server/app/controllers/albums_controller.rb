@@ -19,7 +19,10 @@ class AlbumsController < ApplicationController
     render json: album.as_json()
   end
   def create
-    album = Album.create({name: params[:name], cover: params[:cover], artist_id: params[:artist_id]})
+    album = Album.create({
+      name: params[:name], 
+      cover: params[:cover], 
+      artist_id: params[:artist_id]})
     render json: album
   end
   def destroy

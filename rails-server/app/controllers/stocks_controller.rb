@@ -8,6 +8,15 @@ class StocksController < ApplicationController
     render json: stock.as_json()
   end
   def create
+    stock = Stock.create({
+      medium: params[:medium], 
+      stock_level: params[:stock_level],
+      stock_threshold: params[:stock_threshold],
+      buy_price: params[:buy_price], 
+      sell_price: params[:sell_price],
+      album_id: params[:album_id]
+      })
+    render json: stock
   end
   def destroy
   end
