@@ -20,6 +20,8 @@ class ArtistsController < ApplicationController
     render json: artist.as_json()
   end
   def create
+    artist = Artist.create({name: params[:name], genre: params[:genre]})
+    render json: artist
   end
   def destroy
   end
