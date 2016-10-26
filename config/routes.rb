@@ -5,5 +5,9 @@ Rails.application.routes.draw do
         resources :stocks
       end
     end
+
+    resources :albums do
+      resources :stocks
+    end
   end
 end
